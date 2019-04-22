@@ -1,0 +1,8 @@
+<templateSet group="__Kotlin">
+  <template name="rxcallable" value="Observable.fromCallable {&#10;    $action$&#10;}" description="Create Observable.fromCallable" toReformat="false" toShortenFQNames="true">
+    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

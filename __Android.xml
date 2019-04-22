@@ -1,0 +1,25 @@
+<templateSet group="__Android">
+  <template name="extra" value="public static final String EXTRA_$name$ = &quot;$prefix$.extra.$value$&quot;;" description="Key for a Intent Extra" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <variable name="prefix" expression="currentPackage()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="action" value="public static final String ACTION_$name$ = &quot;$prefix$.action.$value$&quot;;" description="Key for a Intent Action" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <variable name="prefix" expression="currentPackage()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="args" value="private static final String ARGUMENT_$name$ = &quot;$value$&quot;;" description="Key for a Fragment Argument" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

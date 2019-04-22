@@ -1,0 +1,163 @@
+<templateSet group="__KotlinAndroid">
+  <template name="const" value="const val $name$ = $value$" description="Define android style int constant" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="NAME" alwaysStopAt="true" />
+    <variable name="value" expression="groovyScript(&quot;new Random().nextInt(1000)&quot;)" defaultValue="0" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="fbc" value="findViewById&lt;$cast$&gt;(R.id.$resId$);" description="findViewById with cast" toReformat="true" toShortenFQNames="true">
+    <variable name="cast" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="resId" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="foreach" value="for ($i$ in $data$) {&#10;    $cursor$&#10;}" description="Create a for each loop" toReformat="true" toShortenFQNames="true">
+    <variable name="i" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="data" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gone" value="$VIEW$.visibility = android.view.View.GONE&#10;" description="Set view visibility to GONE" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="IntentView" value="android.content.Intent().apply {&#10;    action = Intent.ACTION_VIEW&#10;    data = android.net.Uri.parse($url$)&#10;}.run {&#10;    startActivity(this)&#10;}" description="Creates an Intent with ACTION_VIEW" toReformat="true" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="key" value="private const val KEY_$name$ = &quot;$value$&quot;" description="Key for a bundle" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="newInstance" value="fun newInstance($args$) : $fragment$ {&#10;    $nullChecks$&#10;    return $fragment$().apply {&#10;        arguments = android.os.Bundle().apply {&#10;            $addArgs$&#10;        }&#10;    }&#10;}" description="create a new Fragment instance with arguments" toReformat="true" toShortenFQNames="true">
+    <variable name="fragment" expression="kotlinClassName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="nullChecks" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="addArgs" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="noInstance" value="private $class$() {&#10;    //no instance&#10;}" description="private empty constructor to prohibit instance creation" toReformat="true" toShortenFQNames="true">
+    <variable name="class" expression="className()" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="rgS" value="$resources$.getString(R.string.$stringId$)" description="get a String from resources" toReformat="true" toShortenFQNames="true">
+    <variable name="resources" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="stringId" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="rouiT" value="getActivity().runOnUiThread(new java.lang.Runnable() {&#10;    @Override&#10;    public void run() {&#10;        $cursor$&#10;    }&#10;});" description="runOnUIThread" toReformat="true" toShortenFQNames="true">
+    <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="sbc" value="///////////////////////////////////////////////////////////////////////////&#10;// $blockName$&#10;///////////////////////////////////////////////////////////////////////////" description="block comment for structuring code" toReformat="true" toShortenFQNames="true">
+    <variable name="blockName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+      <option name="KOTLIN_COMMENT" value="true" />
+      <option name="KOTLIN_EXPRESSION" value="true" />
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_STATEMENT" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="Sfmt" value="String.format(&quot;$string$&quot;, $params$);" description="String format" toReformat="true" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="starter" value="fun start(context : android.content.Context) {&#10;    android.content.Intent(context, $ACTIVITY$::class.java).apply {&#10;        putExtra($CURSOR$)&#10;    }.run {&#10;        context.startActivity(this)&#10;    }&#10;}" description="Creates a static start(...) helper method to start an Activity" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTIVITY" expression="kotlinClassName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="CURSOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="Toast" value="android.widget.Toast.makeText($context$, &quot;$text$&quot;, Toast.LENGTH_SHORT).show()&#10;" description="Create a new Toast" toReformat="true" toShortenFQNames="true">
+    <variable name="context" expression="kotlinVariable()" defaultValue="" alwaysStopAt="true" />
+    <variable name="text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="visible" value="$VIEW$.visibility = android.view.View.VISIBLE" description="Set view visibility to VISIBLE" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="extra" value="const val EXTRA_$name$ = &quot;$prefix$.extra.$value$&quot;" description="Key for a extras bundle" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="prefix" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="action" value="const val ACTION_$name$ = &quot;$prefix$.action.$value$&quot;" description="Key for a intent action" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="prefix" expression="kotlinPackageName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="creator" value="@JvmField&#10;val CREATOR = parcelableCreator(::$className$)" description="Parcelable Creator" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="groovyScript(&quot;_1.take(Math.min(23, _1.length()));&quot;, fileNameWithoutExtension()) " defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="args" value="private const val ARGUMENT_$name$ = &quot;$value$&quot;" description="Key for a bundle" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="req" value="const val REQUEST_CODE_$name$ = $value$" description="Define request code" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="NAME" alwaysStopAt="true" />
+    <variable name="value" expression="groovyScript(&quot;new Random().nextInt(1000)&quot;)" defaultValue="0" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="dtag" value="private const val DIALOG_$name$ = &quot;$value$&quot;" description="Tag for a dialog" toReformat="true" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="daggerCon" value="@dagger.android.ContributesAndroidInjector&#10;abstract fun contribute$name$(): $type$" description="Create a contribute method" toReformat="true" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="type" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="daggerVM" value="@dagger.Binds&#10;@dagger.multibindings.IntoMap&#10;@com.pantip.android.common.di.ViewModelKey($type$::class)&#10;abstract fun bind$name$(viewModel: $type$): androidx.lifecycle.ViewModel&#10;" description="Create a ViewModel binding method" toReformat="true" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="type" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+</templateSet>

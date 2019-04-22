@@ -1,0 +1,31 @@
+<templateSet group="__AndroidXML">
+  <template name="todo" value="&lt;!-- TODO $date$ $todo$ --&gt;" description="adds // TODO" toReformat="false" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="fixme" value="&lt;!-- FIXME $date$ $todo$ --&gt;" description="adds // FIXME" toReformat="false" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lmgrid" value="app:layoutManager=&quot;androidx.recyclerview.widget.GridLayoutManager&quot;" description="app:layoutManager=&quot;androidx.recyclerview.widget.GridLayoutManager&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lmlinear" value="app:layoutManager=&quot;androidx.recyclerview.widget.LinearLayoutManager&quot;&#10;" description="app:layoutManager=&quot;androidx.recyclerview.widget.LinearLayoutManager&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="conParent" value="app:layout_constraintBottom_toBottomOf=&quot;parent&quot;&#10;app:layout_constraintEnd_toEndOf=&quot;parent&quot;&#10;app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;app:layout_constraintTop_toTopOf=&quot;parent&quot;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>
