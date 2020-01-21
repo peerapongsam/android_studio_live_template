@@ -1,4 +1,4 @@
-<templateSet group="__KotlinAndroid">
+<templateSet group="_KotlinAndroid">
   <template name="const" value="const val $name$ = $value$" description="Define android style int constant" toReformat="true" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="NAME" alwaysStopAt="true" />
     <variable name="value" expression="groovyScript(&quot;new Random().nextInt(1000)&quot;)" defaultValue="0" alwaysStopAt="false" />
@@ -54,13 +54,23 @@
   </template>
   <template name="noInstance" value="private $class$() {&#10;    //no instance&#10;}" description="private empty constructor to prohibit instance creation" toReformat="true" toShortenFQNames="true">
     <variable name="class" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
   </template>
   <template name="rgS" value="$resources$.getString(R.string.$stringId$)" description="get a String from resources" toReformat="true" toShortenFQNames="true">
     <variable name="resources" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="stringId" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
   </template>
   <template name="rouiT" value="getActivity().runOnUiThread(new java.lang.Runnable() {&#10;    @Override&#10;    public void run() {&#10;        $cursor$&#10;    }&#10;});" description="runOnUIThread" toReformat="true" toShortenFQNames="true">
     <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
   </template>
   <template name="sbc" value="///////////////////////////////////////////////////////////////////////////&#10;// $blockName$&#10;///////////////////////////////////////////////////////////////////////////" description="block comment for structuring code" toReformat="true" toShortenFQNames="true">
     <variable name="blockName" expression="" defaultValue="" alwaysStopAt="true" />
@@ -76,6 +86,9 @@
   <template name="Sfmt" value="String.format(&quot;$string$&quot;, $params$);" description="String format" toReformat="true" toShortenFQNames="true">
     <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="params" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
   </template>
   <template name="starter" value="fun start(context : android.content.Context) {&#10;    android.content.Intent(context, $ACTIVITY$::class.java).apply {&#10;        putExtra($CURSOR$)&#10;    }.run {&#10;        context.startActivity(this)&#10;    }&#10;}" description="Creates a static start(...) helper method to start an Activity" toReformat="false" toShortenFQNames="true">
     <variable name="ACTIVITY" expression="kotlinClassName()" defaultValue="" alwaysStopAt="true" />
@@ -144,20 +157,6 @@
     <context>
       <option name="KOTLIN_OBJECT_DECLARATION" value="true" />
       <option name="KOTLIN_TOPLEVEL" value="true" />
-    </context>
-  </template>
-  <template name="daggerCon" value="@dagger.android.ContributesAndroidInjector&#10;abstract fun contribute$name$(): $type$" description="Create a contribute method" toReformat="true" toShortenFQNames="true">
-    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="name" expression="type" defaultValue="" alwaysStopAt="false" />
-    <context>
-      <option name="KOTLIN_CLASS" value="true" />
-    </context>
-  </template>
-  <template name="daggerVM" value="@dagger.Binds&#10;@dagger.multibindings.IntoMap&#10;@com.pantip.android.common.di.ViewModelKey($type$::class)&#10;abstract fun bind$name$(viewModel: $type$): androidx.lifecycle.ViewModel&#10;" description="Create a ViewModel binding method" toReformat="true" toShortenFQNames="true">
-    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="name" expression="type" defaultValue="" alwaysStopAt="false" />
-    <context>
-      <option name="KOTLIN_CLASS" value="true" />
     </context>
   </template>
 </templateSet>

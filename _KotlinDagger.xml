@@ -1,0 +1,16 @@
+<templateSet group="_KotlinDagger">
+  <template name="daggerCon" value="@dagger.android.ContributesAndroidInjector&#10;abstract fun contribute$name$(): $type$" description="Create a contribute method" toReformat="true" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="type" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="daggerVM" value="@dagger.Binds&#10;@dagger.multibindings.IntoMap&#10;@com.pantip.android.common.di.ViewModelKey($type$::class)&#10;abstract fun bind$name$(viewModel: $type$): androidx.lifecycle.ViewModel&#10;" description="Create a ViewModel binding method" toReformat="true" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="type" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+</templateSet>

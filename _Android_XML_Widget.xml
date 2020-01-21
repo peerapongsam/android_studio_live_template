@@ -1,0 +1,257 @@
+<templateSet group="_Android_XML_Widget">
+  <template name="todo" value="&lt;!-- TODO $date$ $todo$ --&gt;" description="adds // TODO" toReformat="false" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="fixme" value="&lt;!-- FIXME $date$ $todo$ --&gt;" description="adds // FIXME" toReformat="false" toShortenFQNames="true">
+    <variable name="date" expression="date()" defaultValue="" alwaysStopAt="false" />
+    <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lmgrid" value="app:layoutManager=&quot;androidx.recyclerview.widget.GridLayoutManager&quot;" description="app:layoutManager=&quot;androidx.recyclerview.widget.GridLayoutManager&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="lmlinear" value="app:layoutManager=&quot;androidx.recyclerview.widget.LinearLayoutManager&quot;&#10;" description="app:layoutManager=&quot;androidx.recyclerview.widget.LinearLayoutManager&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="LinearLayout" value="&lt;LinearLayout&#10;android:id=&quot;@+id/$VIEW_ID$LinearLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot;&#10;android:orientation=&quot;$ORIENTATION$&quot;&gt;&#10;    $END$&#10;&lt;/LinearLayout&gt;" description="LinearLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <variable name="ORIENTATION" expression="complete()" defaultValue="&quot;vertical&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="FrameLayout" value="&lt;FrameLayout&#10;android:id=&quot;@+id/$VIEW_ID$FrameLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot;&gt;&#10;    $END$&#10;&lt;/FrameLayout&gt;" description="FrameLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;'" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="FrameLayoutS" value="&lt;FrameLayout&#10;android:id=&quot;@+id/$VIEW_ID$FrameLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="FrameLayout with self code tag" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="AppTextView" value="&lt;com.truedigital.component.view.AppTextView&#10;android:id=&quot;@+id/$VIEW_ID$TextView&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="com.truedigital.component.view.AppTextView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="AppEditText" value="&lt;com.truedigital.component.view.AppEditText&#10;android:id=&quot;@+id/$VIEW_ID$EditText&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="com.truedigital.component.view.AppEditText" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="LL" value="&lt;LinearLayout&#10;android:id=&quot;@+id/$VIEW_ID$LinearLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot;&#10;android:orientation=&quot;$ORIENTATION$&quot;&gt;&#10;    $END$&#10;&lt;/LinearLayout&gt;" description="LinearLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <variable name="ORIENTATION" expression="complete()" defaultValue="&quot;vertical&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="FL" value="&lt;FrameLayout&#10;android:id=&quot;@+id/$VIEW_ID$FrameLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot;&gt;&#10;    $END$&#10;&lt;/FrameLayout&gt;" description="FrameLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;'" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="FLS" value="&lt;FrameLayout&#10;android:id=&quot;@+id/$VIEW_ID$FrameLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="FrameLayout with self code tag" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="AET" value="&lt;com.truedigital.component.view.AppEditText&#10;android:id=&quot;@+id/$VIEW_ID$EditText&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="com.truedigital.component.view.AppEditText" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ATV" value="&lt;com.truedigital.component.view.AppTextView&#10;android:id=&quot;@+id/$VIEW_ID$TextView&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="com.truedigital.component.view.AppTextView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="TVA" value="&lt;com.truedigital.component.view.AppTextView&#10;android:id=&quot;@+id/$VIEW_ID$TextView&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="com.truedigital.component.view.AppTextView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ETA" value="&lt;com.truedigital.component.view.AppEditText&#10;android:id=&quot;@+id/$VIEW_ID$EditText&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="com.truedigital.component.view.AppEditText" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ImageView" value="&lt;ImageView&#10;android:id=&quot;@+id/$VIEW_ID$ImageView&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="ImageView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ConstraintLayout" value="&lt;androidx.constraintlayout.widget.ConstraintLayout&#10;android:id=&quot;@+id/$VIEW_ID$ConstraintLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot;&gt;&#10;    $END$&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="androidx.constraintlayout.widget.ConstraintLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;'" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="CL" value="&lt;androidx.constraintlayout.widget.ConstraintLayout&#10;android:id=&quot;@+id/$VIEW_ID$ConstraintLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot;&gt;&#10;    $END$&#10;&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;" description="androidx.constraintlayout.widget.ConstraintLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;'" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="CLS" value="&lt;androidx.constraintlayout.widget.ConstraintLayout&#10;android:id=&quot;@+id/$VIEW_ID$ConstraintLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="androidx.constraintlayout.widget.ConstraintLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;'" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ConstraintLayoutS" value="&lt;androidx.constraintlayout.widget.ConstraintLayout&#10;android:id=&quot;@+id/$VIEW_ID$ConstraintLayout&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="androidx.constraintlayout.widget.ConstraintLayout" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;match_parent&quot;'" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;match_parent&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="Barrier" value="&lt;androidx.constraintlayout.widget.Barrier&#10;android:id=&quot;@+id/$VIEW_ID$Barrier&quot;&#10;android:layout_width=&quot;wrap_content&quot;&#10;android:layout_height=&quot;wrap_content&quot;&#10;app:barrierDirection=&quot;$DIRECTION$&quot;&#10;app:constraint_referenced_ids=&quot;$REFERENCED_IDS$&quot; /&gt;" description="androidx.constraintlayout.widget.Barrier" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="DIRECTION" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="REFERENCED_IDS" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="Barrier1" value="&lt;androidx.constraintlayout.widget.Guideline&#10;android:id=&quot;@+id/$VIEW_ID$Guideline&quot;&#10;android:layout_width=&quot;wrap_content&quot;&#10;android:layout_height=&quot;wrap_content&quot;&#10;android:orientation=&quot;$ORIENTATION$&quot; /&gt;" description="androidx.constraintlayout.widget.Barrier" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="ORIENTATION" expression="complete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="IV" value="&lt;ImageView&#10;android:id=&quot;@+id/$VIEW_ID$ImageView&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="ImageView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="IVRatio" value="&lt;ImageView&#10;android:id=&quot;@+id/$VIEW_ID$ImageView&quot;&#10;android:layout_width=&quot;0dp&quot;&#10;android:layout_height=&quot;0dp&quot;&#10;app:layout_constraintDimensionRatio=&quot;$RATIO$&quot;&#10;app:layout_constraintBottom_toBottomOf=&quot;patent&quot;&#10;app:layout_constraintEnd_toEndOf=&quot;patent&quot;&#10;app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;" description="ImageView with dimension ratio" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="RATIO" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ImageViewRatio" value="&lt;ImageView&#10;android:id=&quot;@+id/$VIEW_ID$ImageView&quot;&#10;android:layout_width=&quot;0dp&quot;&#10;android:layout_height=&quot;0dp&quot;&#10;app:layout_constraintDimensionRatio=&quot;$RATIO$&quot;&#10;app:layout_constraintBottom_toBottomOf=&quot;patent&quot;&#10;app:layout_constraintEnd_toEndOf=&quot;patent&quot;&#10;app:layout_constraintStart_toStartOf=&quot;parent&quot;&#10;app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;" description="ImageView with dimension ratio" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="RATIO" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="TextView" value="&lt;TextView&#10;android:id=&quot;@+id/$VIEW_ID$TextView&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="TextView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="TV" value="&lt;TextView&#10;android:id=&quot;@+id/$VIEW_ID$TextView&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="TextView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="EditText" value="&lt;EditText&#10;android:id=&quot;@+id/$VIEW_ID$EditText&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="EditText" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="ET" value="&lt;EditText&#10;android:id=&quot;@+id/$VIEW_ID$EditText&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="EditText" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="Button" value="&lt;Button&#10;android:id=&quot;@+id/$VIEW_ID$Button&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="Button" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="BTN" value="&lt;Button&#10;android:id=&quot;@+id/$VIEW_ID$Button&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="Button" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="AppButton" value="&lt;com.truedigital.component.view.AppTextView&#10;android:id=&quot;@+id/$VIEW_ID$Button&quot;&#10;android:layout_width=&quot;$LAYOUT_WIDTH$&quot;&#10;android:layout_height=&quot;$LAYOUT_HEIGHT$&quot; /&gt;" description="com.truedigital.component.view.AppTextView" toReformat="true" toShortenFQNames="true">
+    <variable name="VIEW_ID" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+    <variable name="LAYOUT_WIDTH" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <variable name="LAYOUT_HEIGHT" expression="complete()" defaultValue="&quot;wrap_content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>

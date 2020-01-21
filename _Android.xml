@@ -1,4 +1,4 @@
-<templateSet group="__Android">
+<templateSet group="_Android">
   <template name="extra" value="public static final String EXTRA_$name$ = &quot;$prefix$.extra.$value$&quot;;" description="Key for a Intent Extra" toReformat="true" toShortenFQNames="true">
     <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="name" expression="capitalizeAndUnderscore(value)" defaultValue="" alwaysStopAt="false" />

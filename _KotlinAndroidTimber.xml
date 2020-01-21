@@ -1,4 +1,4 @@
-<templateSet group="__KotlinAndroidTimber">
+<templateSet group="_KotlinAndroidTimber">
   <template name="td" value="timber.log.Timber.d(&quot;$METHOD_NAME$(): $content$&quot;)" description="Timber.d(String)" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD_NAME" expression="kotlinFunctionName()" defaultValue="" alwaysStopAt="false" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
