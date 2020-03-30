@@ -76,7 +76,7 @@
       <option name="XML" value="true" />
     </context>
   </template>
-  <template name="tb" value="app:layout_constraintTop_toButtomOf=&quot;@+id/$VIEW_ID$&quot;" description="app:layout_constraintTop_toButtomOf=&quot;@+id/$VIEW_ID$&quot;" toReformat="true" toShortenFQNames="true">
+  <template name="tb" value="app:layout_constraintTop_toBottomOf=&quot;@+id/$VIEW_ID$&quot;" description="app:layout_constraintTop_toBottomOf=&quot;@+id/$VIEW_ID$&quot;" toReformat="true" toShortenFQNames="true">
     <variable name="VIEW_ID" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="XML" value="true" />
