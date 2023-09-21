@@ -1,0 +1,27 @@
+<templateSet group="_KotlinTest">
+  <template name="test" value="@org.junit.jupiter.api.Test&#10;fun `$FUNCTION_NAME$`() {&#10;    // arrange&#10;&#10;    // act&#10;&#10;    // assert&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNCTION_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="setup" value="@org.junit.jupiter.api.BeforeEach&#10;fun setUp() {&#10;    &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="tear" value="@org.junit.jupiter.api.AfterEach&#10;fun tearDown() {&#10;    &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="e2etest" value="@org.junit.Test&#10;// $TICKET$ $TITLE$&#10;fun test_$cticket$_$ctitle$() {&#10;    &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TICKET" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="cticket" expression="capitalizeAndUnderscore(TICKET)" defaultValue="" alwaysStopAt="false" />
+    <variable name="ctitle" expression="spacesToUnderscores(TITLE)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+</templateSet>
